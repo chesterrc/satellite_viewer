@@ -1,5 +1,5 @@
 import datetime
-from flask import Flask, request
+from flask import Flask, request, jsonify
 from sscws.sscws import SscWs 
 
 
@@ -10,5 +10,5 @@ ssc = SscWs()
 @app.get("/", method=["GET"])
 def home():
     time = datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%SZ")
-    req = request.get_json(ssc.get_locations(["iss"]), time)
-    return req
+    req = ssc.get_locations(["iss"], time)
+    return jsonify(req)
