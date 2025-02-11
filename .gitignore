@@ -1,1 +1,3 @@
 .satellite_viewer_venv/
+node_modules/
+.vscode/

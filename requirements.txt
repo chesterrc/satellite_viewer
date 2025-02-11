@@ -1,0 +1,20 @@
+attrs==25.1.0
+blinker==1.9.0
+cdflib==1.3.3
+certifi==2025.1.31
+charset-normalizer==3.4.1
+click==8.1.8
+Flask==3.1.0
+idna==3.10
+itsdangerous==2.2.0
+Jinja2==3.1.5
+MarkupSafe==3.0.2
+numpy==2.2.2
+python-dateutil==2.9.0.post0
+redis==5.2.1
+requests==2.32.3
+-e git+ssh://git@github.com/chesterrc/satellite_viewer.git@b50cf81437a44f183d61c0eb6cf2a238cfc1089d#egg=satellite_viewer&subdirectory=src/satellite_viewer_server
+six==1.17.0
+sscws==2.4.2
+urllib3==2.3.0
+Werkzeug==3.1.3
