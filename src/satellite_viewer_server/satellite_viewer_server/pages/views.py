@@ -1,6 +1,4 @@
 import asyncio
-import attrs
-import json
 from datetime import datetime, timedelta, timezone
 from flask import jsonify, render_template
 import satellite_viewer_server.pages.utils.data_parser
@@ -21,7 +19,7 @@ async def home():
     app.logger.debug(f"time: {time}, inital_poll: {initial_poll} initial_poll data type: {type(initial_poll)}")
 
     data =  await satellite_viewer_server.pages.utils.data_parser.parse_satellite_data(initial_poll)
-    return data
+    return jsonify(data)
 
 if __name__ == "__main__":
     app.run(debug=True)
